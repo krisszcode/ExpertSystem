@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Facts>
+    <Fact id="name id">
+        <Description value="name"/>
+        <Evals>
+            <Eval id="portable">true of false</Eval>
+            <Eval id="gaming">true of false</Eval>
+            <Eval id="budget">true of false</Eval>
+            <Eval id="display">true of false</Eval>
+	    <Eval id="backlit keyboard">true of false</Eval>
+        </Evals>
+    </Fact>
+      ...
+</Facts>

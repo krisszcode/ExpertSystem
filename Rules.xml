@@ -33,17 +33,6 @@
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="display">
-        <Question>Do you need large display?</Question>
-        <Answer>
-            <Selection value="true">
-                <MultipleValue value="gps,bluetooth,dvd,automatic transmission,self-driving"/>
-            </Selection>
-            <Selection value="false">
-                <MultipleValue value="nothing,abs,fog lights,central lock"/>
-            </Selection>
-        </Answer>
-    </Rule>
     <Rule id="backlit">
         <Question>Do you need backlit keyboard?</Question>
         <Answer>

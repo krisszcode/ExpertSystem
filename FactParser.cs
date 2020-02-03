@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace ExpertSystem
 {
     public class FactParser : XMLParser

@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace ExpertSystem
 {
     public static class toolbox

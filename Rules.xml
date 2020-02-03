@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Rules>
+    <Rule id="portable">
+        <Question>Would you like a portable computer?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="gaming">
+        <Question>Would you like playing with modern games?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="comfort"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="speed"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="budget">
+        <Question>Do you have 200.000 Ft for the computer?</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="gps,bluetooth,dvd,automatic transmission,self-driving"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="nothing,abs,fog lights,central lock"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="display">
+        <Question>Do you need large display?</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="gps,bluetooth,dvd,automatic transmission,self-driving"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="nothing,abs,fog lights,central lock"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="backlit">
+        <Question>Do you need backlit keyboard?</Question>
+        <Answer>
+            <Selection value="true">
+                <MultipleValue value="gps,bluetooth,dvd,automatic transmission,self-driving"/>
+            </Selection>
+            <Selection value="false">
+                <MultipleValue value="nothing,abs,fog lights,central lock"/>
+            </Selection>
+        </Answer>
+    </Rule>
+</Rules>

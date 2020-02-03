@@ -1,14 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Facts>
-    <Fact id="name id">
-        <Description value="name"/>
+    <Fact id="sparpc">
+        <Description value="Spar budget PC"/>
         <Evals>
-            <Eval id="portable">true of false</Eval>
-            <Eval id="gaming">true of false</Eval>
-            <Eval id="budget">true of false</Eval>
-            <Eval id="display">true of false</Eval>
-	    <Eval id="backlit keyboard">true of false</Eval>
+            <Eval id="portable">false</Eval>
+            <Eval id="gaming">false</Eval>
+            <Eval id="budget">false</Eval>
+	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
-      ...
+	
+	<Fact id="razerdeathbringer">
+        <Description value="Razer Deathbringer Gaming PC"/>
+        <Evals>
+            <Eval id="portable">false</Eval>
+            <Eval id="gaming">true</Eval>
+            <Eval id="budget">true</Eval>
+	    	<Eval id="backlit keyboard">true</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="gamingszamito">
+        <Description value="Konnektoros Asztali gaming számító NoLight Edition"/>
+        <Evals>
+            <Eval id="portable">false</Eval>
+            <Eval id="gaming">true</Eval>
+            <Eval id="budget">true</Eval>
+	    	<Eval id="backlit keyboard">false</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="AlienwareUFO">
+        <Description value="Alienware UFOAttack NoLight Edition"/>
+        <Evals>
+            <Eval id="portable">false</Eval>
+            <Eval id="gaming">true</Eval>
+            <Eval id="budget">false</Eval>
+	    	<Eval id="backlit keyboard">false</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="WinXP">
+        <Description value="Windows 11 Desktop PC Light Edition"/>
+        <Evals>
+            <Eval id="portable">false</Eval>
+            <Eval id="gaming">false</Eval>
+            <Eval id="budget">true</Eval>
+	    	<Eval id="backlit keyboard">true</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="MacSajtreszelo">
+        <Description value="iMac iSajtreszelő PC "/>
+        <Evals>
+            <Eval id="portable">false</Eval>
+            <Eval id="gaming">false</Eval>
+            <Eval id="budget">true</Eval>
+	    	<Eval id="backlit keyboard">false</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="Win95">
+        <Description value="Windows 95 LightBoard Edition"/>
+        <Evals>
+            <Eval id="portable">false</Eval>
+            <Eval id="gaming">false</Eval>
+            <Eval id="budget">false</Eval>
+	    	<Eval id="backlit keyboard">true</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="Razor">
+        <Description value="Razor PredatorWare Egirl Pink Blacklit Edition"/>
+        <Evals>
+            <Eval id="portable">false</Eval>
+            <Eval id="gaming">true</Eval>
+            <Eval id="budget">false</Eval>
+	    	<Eval id="backlit keyboard">true</Eval>
+        </Evals>
+    </Fact>
+	
+	
+	 <Fact id="laptop1">
+        <Description value="laptop1"/>
+        <Evals>
+            <Eval id="portable">true</Eval>
+            <Eval id="gaming">false</Eval>
+            <Eval id="budget">false</Eval>
+	    	<Eval id="backlit keyboard">false</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="laptop2">
+        <Description value="laptop2"/>
+        <Evals>
+            <Eval id="portable">true</Eval>
+            <Eval id="gaming">true</Eval>
+            <Eval id="budget">true</Eval>
+	    	<Eval id="backlit keyboard">true</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="laptop3">
+        <Description value="laptop3"/>
+        <Evals>
+            <Eval id="portable">true</Eval>
+            <Eval id="gaming">true</Eval>
+            <Eval id="budget">true</Eval>
+	    	<Eval id="backlit keyboard">false</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="laptop4">
+        <Description value="laptop4"/>
+        <Evals>
+            <Eval id="portable">false</Eval>
+            <Eval id="gaming">true</Eval>
+            <Eval id="budget">false</Eval>
+	    	<Eval id="backlit keyboard">false</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="macbook">
+        <Description value="MacBook Air Water Fire iPaid edition "/>
+        <Evals>
+            <Eval id="portable">false</Eval>
+            <Eval id="gaming">false</Eval>
+            <Eval id="budget">true</Eval>
+	    	<Eval id="backlit keyboard">true</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="laptop6">
+        <Description value="laptop6"/>
+        <Evals>
+            <Eval id="portable">true</Eval>
+            <Eval id="gaming">false</Eval>
+            <Eval id="budget">true</Eval>
+	    	<Eval id="backlit keyboard">false</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="laptop7">
+        <Description value="laptop7"/>
+        <Evals>
+            <Eval id="portable">true</Eval>
+            <Eval id="gaming">false</Eval>
+            <Eval id="budget">false</Eval>
+	    	<Eval id="backlit keyboard">true</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="laptop8">
+        <Description value="laptop8"/>
+        <Evals>
+            <Eval id="portable">true</Eval>
+            <Eval id="gaming">true</Eval>
+            <Eval id="budget">false</Eval>
+	    	<Eval id="backlit keyboard">true</Eval>
+        </Evals>
+    </Fact>
+	
+    
+      
 </Facts>

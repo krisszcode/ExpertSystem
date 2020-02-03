@@ -72,7 +72,6 @@ namespace ExpertSystem
                     Thread.Sleep(500);
                     return true;
             }
-
         }
     }
 }

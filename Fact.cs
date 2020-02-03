@@ -8,7 +8,7 @@ namespace ExpertSystem
         string Description { get; set; }
         bool Portable { get; set; }
         bool Gaming { get; set; }
-        bool Budget { get; set; }
+        bool Expensive { get; set; }
         bool BacklitKeyboard { get; set; }
 
         public Fact(string id, string description)
@@ -18,7 +18,7 @@ namespace ExpertSystem
         }
         public List<string> GetIDList()
         {
-            List<string> iDList = new List<string>() { "Portable", "Gaming", "Budget", "BacklitKeyboard" };
+            List<string> iDList = new List<string>() { "Portable", "Gaming", "Expensive", "BacklitKeyboard" };
             return iDList;
         }
         public void SetFactValueByID(string id, bool value)
@@ -31,8 +31,8 @@ namespace ExpertSystem
                 case "Gaming":
                     Gaming = value;
                     break;
-                case "Budget":
-                    Budget = value;
+                case "Expensive":
+                    Expensive = value;
                     break;
                 case "BackLitKeyboard":
                     BacklitKeyboard = value;
@@ -49,8 +49,8 @@ namespace ExpertSystem
                     return Portable;
                 case "Gaming":
                     return Gaming;
-                case "Budget":
-                    return Budget;
+                case "Expensive":
+                    return Expensive;
                 case "BackLitKeyboard":
                     return BacklitKeyboard;
                 default:

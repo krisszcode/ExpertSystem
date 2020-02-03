@@ -23,7 +23,7 @@
         </Answer>
     </Rule>
     <Rule id="budget">
-        <Question>Do you have 200.000 Ft for the computer?</Question>
+        <Question>Do you have 300.000 Ft for the computer?</Question>
         <Answer>
             <Selection value="true">
                 <MultipleValue value="gps,bluetooth,dvd,automatic transmission,self-driving"/>

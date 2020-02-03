@@ -22,9 +22,9 @@ namespace ExpertSystem
                 newFact.SetFactValueByID(property, BoolInput(property + "?: "));
             }
         }
-        public IEnumerator<Fact> GetIterator()
+        /*public IEnumerator<Fact> GetIterator()
         {
 
-        }
+        }*/
     }
 }

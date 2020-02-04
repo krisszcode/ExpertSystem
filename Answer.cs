@@ -6,15 +6,27 @@ namespace ExpertSystem
 {
     public class Answer
     {
+
+        Value value;
         public bool evaluateAnswerByInput(String input)
         {
-            return false;
+            if (input.ToUpper() == "TRUE")
+            {
+                return true;
+            }
+            else if (input.ToUpper() == "FALSE")
+            {
+                return false;
+            }
+            else
+            {
+                throw new Exception("Ne szolits meg");
+            }
         }
-        
+
         public void addValue(Value value)
         {
-
+            this.value = value;
         }
-       
     }
 }

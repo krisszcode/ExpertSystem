@@ -17,18 +17,15 @@ namespace ExpertSystem
             string description = AnyInput("The description of the fact?: ");
             Fact newFact = new Fact(id, description);
             List<string> propertiesList = new List<string>();
-            foreach (KeyValuePair<string, bool> properties in newFact.GetIDList())
-            {
-                propertiesList.Add(properties.Key);
-            }
+            propertiesList = newFact.GetIDList();
             foreach (string property in propertiesList)
             {
                 newFact.SetFactValueByID(property, BoolInput(property + "?: "));
             }
         }
-        public IEnumerator<Fact> GetEnumerator()
+        /*public IEnumerator<Fact> GetIterator()
         {
 
-        }
+        }*/
     }
 }

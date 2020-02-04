@@ -7,7 +7,7 @@ namespace ExpertSystem
     public class Answer
     {
 
-        Value value;
+        public Value value;
         public bool evaluateAnswerByInput(String input)
         {
             if (input.ToUpper() == "YES")

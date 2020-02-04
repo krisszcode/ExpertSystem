@@ -65,5 +65,10 @@ namespace ExpertSystem
                 }
             }
         }
+        public static bool BoolTrans(string text)
+        {
+            if (text == "true") { return true; }
+            else { return false; }
+        }
     }
 }

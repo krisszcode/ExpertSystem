@@ -31,6 +31,8 @@ namespace ExpertSystem
 
             object IEnumerator.Current => throw new NotImplementedException();
 
+            Fact IEnumerator<Fact>.Current => throw new NotImplementedException();
+
             public void Dispose()
             {
             }

@@ -6,11 +6,17 @@ namespace ExpertSystem
 {
     class Program
     {
+        FactParser factParser = new FactParser();
+        RuleParser ruleParser = new RuleParser();
+
+        public Program()
+        {
+            ESProvider eSProvider = new ESProvider(factParser, ruleParser);
+        }
+
         static void Main(string[] args)
         {
-            FactParser factParser = new FactParser();
-            RuleParser ruleParser = new RuleParser();
-            ESProvider eSProvider = new ESProvider(factParser, ruleParser);
+            Program program = new Program();
             bool loop = true;
             while (loop)
             {
@@ -18,6 +24,7 @@ namespace ExpertSystem
                 loop = Choose();
             }
         }
+
         static void Menu()
         {
             Console.Clear();

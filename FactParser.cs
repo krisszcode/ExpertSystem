@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml;
+using static ExpertSystem.toolbox;
 
 namespace ExpertSystem
 {
@@ -10,10 +11,10 @@ namespace ExpertSystem
         {
             string id = "";
             string desc = "";
-            bool portable;
-            bool gaming;
-            bool expensive;
-            bool backlit;
+            bool portable = false;
+            bool gaming = false;
+            bool expensive = false;
+            bool backlit = false;
             XmlDocument xmlDocument = new XmlDocument();
             xmlDocument.Load(XMLPath);
             foreach (XmlNode xmlNode in xmlDocument.DocumentElement)
@@ -30,44 +31,20 @@ namespace ExpertSystem
                         switch (xmlNode2.Attributes["id"].Value)
                         {
                             case "portable":
-                                if (xmlNode2.InnerText == "false")
-                                {
-                                    portable = false;
-                                }
-                                else
-                                {
-                                    portable = true;
-                                }
+                                if (xmlNode2.InnerText == "false") { portable = false; }
+                                else { portable = true; }
                                 break;
                             case "gaming":
-                                if (xmlNode2.InnerText == "false")
-                                {
-                                    gaming = false;
-                                }
-                                else
-                                {
-                                    gaming = true;
-                                }
+                                if (xmlNode2.InnerText == "false") { gaming = false; }
+                                else { gaming = true; }
                                 break;
                             case "expensive":
-                                if (xmlNode2.InnerText == "false")
-                                {
-                                    expensive = false;
-                                }
-                                else
-                                {
-                                    expensive = true;
-                                }
+                                if (xmlNode2.InnerText == "false") { expensive = false; }
+                                else { expensive = true; }
                                 break;
                             case "backlit keyboard":
-                                if (xmlNode2.InnerText == "false")
-                                {
-                                    backlit = false;
-                                }
-                                else
-                                {
-                                    backlit = true;
-                                }
+                                if (xmlNode2.InnerText == "false") { backlit = false; }
+                                else { backlit = true; }
                                 break;
                             default:
                                 break;
@@ -76,6 +53,11 @@ namespace ExpertSystem
                 }
             }
             Fact fact = new Fact(id, desc);
+            fact.SetFactValueByID("portable", portable);
+            fact.SetFactValueByID("gaming", gaming);
+            fact.SetFactValueByID("expensive", expensive);
+            fact.SetFactValueByID("backlit keyboard", backlit);
+            
             
         }
 

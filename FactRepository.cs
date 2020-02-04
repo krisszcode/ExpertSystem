@@ -1,34 +1,51 @@
 ﻿using System;
 using static ExpertSystem.toolbox;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace ExpertSystem
 {
     public class FactRepository
     {
-        List<Fact> factList = new List<Fact>();
+        public List<Fact> factList = new List<Fact>();
         public FactRepository()
         {
+            FactEnumerator factEnumerator = new FactEnumerator();
         }
 
         public void AddFact(Fact fact)
         {
-            string id = AnyInput("The ID of the fact?: ");
-            string description = AnyInput("The description of the fact?: ");
-            Fact newFact = new Fact(id, description);
-            List<string> propertiesList = new List<string>();
-            foreach (KeyValuePair<string, bool> properties in newFact.GetIDList())
-            {
-                propertiesList.Add(properties.Key);
-            }
-            foreach (string property in propertiesList)
-            {
-                newFact.SetFactValueByID(property, BoolInput(property + "?: "));
-            }
+            factList.Add(fact);
         }
         public IEnumerator<Fact> GetEnumerator()
         {
 
+        }
+        public class FactEnumerator : IEnumerator<Fact>
+        {
+            int index = -1;
+            public Fact Current()
+            {
+                return factList[index];
+            }
+
+            object IEnumerator.Current => throw new NotImplementedException();
+
+            public void Dispose()
+            {
+            }
+
+            public bool MoveNext()
+            {
+                index++;
+                return index < factList.Count;
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new InvalidOperationException();
+            }
         }
     }
 }

@@ -9,7 +9,6 @@
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="razerdeathbringer">
         <Description value="Razer Deathbringer Gaming PC"/>
         <Evals>
@@ -19,7 +18,6 @@
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="gamingszamito">
         <Description value="Konvektoros Asztali gaming számító NoLight Edition"/>
         <Evals>
@@ -29,7 +27,6 @@
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="AlienwareUFO">
         <Description value="Alienware UFOAttack LampaLekapcsolos Edition"/>
         <Evals>
@@ -39,7 +36,6 @@
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="Win11">
         <Description value="Windows 11 Desktop PC Light Edition"/>
         <Evals>
@@ -49,7 +45,6 @@
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="MacSajtreszelo">
         <Description value="iMac iSajtreszelő PC "/>
         <Evals>
@@ -59,7 +54,6 @@
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="Win95">
         <Description value="Windows 95 LightBoard Edition"/>
         <Evals>
@@ -69,7 +63,6 @@
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="Razor">
         <Description value="Razor PredatorWare Egirl Pink Blacklit Edition"/>
         <Evals>
@@ -79,9 +72,7 @@
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
-	
-	
-	 <Fact id="laptop1">
+	<Fact id="laptop1">
         <Description value="Hurcolhato Nagykepernyos Internetezos Dell Szamito Laptop"/>
         <Evals>
             <Eval id="portable">true</Eval>
@@ -90,7 +81,6 @@
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="RacerAligator">
         <Description value="Racer Aligator Predator Gaming Laptop"/>
         <Evals>
@@ -100,7 +90,6 @@
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="Primitiv">
         <Description value="Primitiv Mocsari Harcos XXX Laptop"/>
         <Evals>
@@ -110,7 +99,6 @@
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="HyperXSamsung">
         <Description value="HyperX Samsung Batelfild szamito"/>
         <Evals>
@@ -120,7 +108,6 @@
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="macbook">
         <Description value="Bolondos hordozható almas szamito laptop "/>
         <Evals>
@@ -130,7 +117,6 @@
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="Ugynoki">
         <Description value="Ugynoki Titkos Rejtett Szamito Laptop"/>
         <Evals>
@@ -140,7 +126,6 @@
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="Dolgozhato">
         <Description value="Vilagos Dolgozhato Szamolo Szamito Laptop"/>
         <Evals>
@@ -150,7 +135,6 @@
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
-	
 	<Fact id="Aramszamla">
         <Description value="Acer Aramszamla Megboritos Gaming Laptop"/>
         <Evals>
@@ -160,7 +144,4 @@
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
-	
-    
-      
 </Facts>

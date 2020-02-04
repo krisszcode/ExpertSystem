@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml;
 
 namespace ExpertSystem
 {
@@ -7,12 +8,20 @@ namespace ExpertSystem
     {
         public override void LoadXmlDocument(string XMLPath)
         {
-            throw new NotImplementedException();
+            XmlDocument xmlDocument = new XmlDocument();
+            xmlDocument.Load(XMLPath);
+            foreach (XmlNode xmlNode in xmlDocument.DocumentElement)
+            {
+                Console.WriteLine(xmlNode.ChildNodes);
+            }
+
+
         }
 
         public FactRepository GetfactRepository()
         {
-
+            FactRepository factRepository = new FactRepository();
+            return factRepository;
         }
     }
 }

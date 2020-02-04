@@ -6,9 +6,11 @@ namespace ExpertSystem
 {
     class ESProvider
     {
+        public FactRepository factRepository;
+
         public ESProvider(FactParser factParser, RuleParser ruleParser)
         {
-
+            factRepository = factParser.GetfactRepository();
         }
 
         public void collectAnswers()

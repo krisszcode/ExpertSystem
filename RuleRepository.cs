@@ -8,22 +8,23 @@ namespace ExpertSystem
     public class RuleRepository
     {
 
-        private List<Question> ListOfQuestions = new List<Question>();
+        static List<Question> ListOfQuestions = new List<Question>();
         
 
-         class QuestionEnumerator : Enumerator //UML rajz iterator interface
+         class QuestionEnumerator : IEnumerator<Question> //UML rajz iterator interface
         {
+
             private int index = -1;
 
-             bool HasNext()
+              bool HasNext()
              {
                 return index < ListOfQuestions.Count;
              }
 
-
-
-
-
+            public IEnumerator<Question> Next()
+            {
+                return ListOfQuestions[index++];
+            }
 
         }
 
@@ -34,7 +35,7 @@ namespace ExpertSystem
 
         public IEnumerator<Question> GetEnumerator()
         {
-            return null;
+            return new QuestionEnumerator();
         }
 
     }

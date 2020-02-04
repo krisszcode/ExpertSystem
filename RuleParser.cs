@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 namespace ExpertSystem
 {
     public class RuleParser
@@ -9,7 +9,7 @@ namespace ExpertSystem
 
         public RuleRepository GetRuleRepository()
         {
-            return null;
+            return new RuleRepository();
         }
 
 

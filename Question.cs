@@ -34,7 +34,7 @@ namespace ExpertSystem
 
         public bool GetEvalutedAnswer(string input)
         {
-            
+            return Answer.evaluateAnswerByInput(input);
         }
 
        

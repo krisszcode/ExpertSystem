@@ -10,11 +10,11 @@ namespace ExpertSystem
         Value value;
         public bool evaluateAnswerByInput(String input)
         {
-            if (input.ToUpper() == "TRUE")
+            if (input.ToUpper() == "YES")
             {
                 return true;
             }
-            else if (input.ToUpper() == "FALSE")
+            else if (input.ToUpper() == "NO")
             {
                 return false;
             }

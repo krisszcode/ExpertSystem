@@ -33,7 +33,8 @@ namespace ExpertSystem
 
             public bool MoveNext()
             {
-                return index < DictionaryOfQuestions.Count;
+                
+                return ++index < DictionaryOfQuestions.Count;
             }
 
             public void Reset()

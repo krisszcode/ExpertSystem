@@ -8,47 +8,29 @@ namespace ExpertSystem
     public class RuleRepository
     {
 
-        static Dictionary<Question,string> DictionaryOfQuestions = new Dictionary<Question,string>();
+        static List<Question> ListOfQuestions = new List<Question>();
+        
 
-
-        public RuleRepository()
+         class QuestionEnumerator : IEnumerator<Question> //UML rajz iterator interface
         {
-            QuestionEnumerator enumerator = new QuestionEnumerator();
+
+            private int index = -1;
+
+              bool HasNext()
+             {
+                return index < ListOfQuestions.Count;
+             }
+
+            public IEnumerator<Question> Next()
+            {
+                return ListOfQuestions[index++];
+            }
+
         }
-
-
-
-        // inner class
-        class QuestionEnumerator : IEnumerator<Question> //UML rajz iterator interface
-        {
-            int index = -1;
-
-            public Question Current { get; private set; }
-
-            object IEnumerator.Current => throw new NotImplementedException();
-
-            public void Dispose()
-            {
-            }
-
-            public bool MoveNext()
-            {
-                return index < DictionaryOfQuestions.Count;
-            }
-
-            public void Reset()
-            {
-                throw new InvalidOperationException();
-            }
-        }
-        // inner class
-
-
-
 
         public void AddQuestion(Question question)
         {
-            DictionaryOfQuestions.Add(question, question.GetID());
+            ListOfQuestions.Add(question);
         }
 
         public IEnumerator<Question> GetEnumerator()

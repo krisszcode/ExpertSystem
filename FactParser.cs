@@ -12,7 +12,24 @@ namespace ExpertSystem
             xmlDocument.Load(XMLPath);
             foreach (XmlNode xmlNode in xmlDocument.DocumentElement)
             {
-                Console.WriteLine(xmlNode.ChildNodes);
+                Console.WriteLine(xmlNode.Attributes[0].InnerText);
+                foreach (XmlNode xmlNode1 in xmlNode)
+                {
+                    //List<string> listString = new List<string>() { "id", "value", "asd" };
+                    //if (listString[0])
+                    if (xmlNode1.LocalName == "Description")
+                    {
+                        Console.WriteLine(xmlNode1.Attributes["value"].Value);
+                    }
+                    foreach (XmlNode xmlNode2 in xmlNode1)
+                    {
+                        XmlAttribute idAttr = xmlNode2.Attributes["id"];
+                        Console.Write(idAttr.Value + " - ");
+                        Console.WriteLine(xmlNode2.InnerText);
+                    }
+                    Console.WriteLine();
+                }
+
             }
 
 

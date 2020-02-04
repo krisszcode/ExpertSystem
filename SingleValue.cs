@@ -16,9 +16,10 @@ namespace ExpertSystem
 
         public override List<string> getInputPattern()
         {
-            List<string> copy = new List<string>();
-
-            copy.Add(Param);
+            List<string> copy = new List<string>
+            {
+                Param
+            };
 
             return copy;
         }

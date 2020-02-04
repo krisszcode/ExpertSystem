@@ -10,7 +10,11 @@ namespace ExpertSystem
 
         public ESProvider(FactParser factParser, RuleParser ruleParser)
         {
+<<<<<<< HEAD
             factRepository = factParser.GetfactRepository();
+=======
+            FactRepository factRepo = new FactRepository();
+>>>>>>> afa2477db1ee7425a968dcebd1830839d9d4e141
         }
 
         public void collectAnswers()

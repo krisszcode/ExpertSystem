@@ -8,31 +8,75 @@ namespace ExpertSystem
     {
         public override void LoadXmlDocument(string XMLPath)
         {
+            string id = "";
+            string desc = "";
+            bool portable;
+            bool gaming;
+            bool expensive;
+            bool backlit;
             XmlDocument xmlDocument = new XmlDocument();
             xmlDocument.Load(XMLPath);
             foreach (XmlNode xmlNode in xmlDocument.DocumentElement)
             {
-                Console.WriteLine(xmlNode.Attributes[0].InnerText);
+                id = xmlNode.Attributes[0].InnerText;
                 foreach (XmlNode xmlNode1 in xmlNode)
                 {
-                    //List<string> listString = new List<string>() { "id", "value", "asd" };
-                    //if (listString[0])
-                    if (xmlNode1.LocalName == "Description")
+                     if (xmlNode1.LocalName == "Description")
                     {
-                        Console.WriteLine(xmlNode1.Attributes["value"].Value);
+                        desc = xmlNode1.Attributes["value"].Value;
                     }
                     foreach (XmlNode xmlNode2 in xmlNode1)
                     {
-                        XmlAttribute idAttr = xmlNode2.Attributes["id"];
-                        Console.Write(idAttr.Value + " - ");
-                        Console.WriteLine(xmlNode2.InnerText);
+                        switch (xmlNode2.Attributes["id"].Value)
+                        {
+                            case "portable":
+                                if (xmlNode2.InnerText == "false")
+                                {
+                                    portable = false;
+                                }
+                                else
+                                {
+                                    portable = true;
+                                }
+                                break;
+                            case "gaming":
+                                if (xmlNode2.InnerText == "false")
+                                {
+                                    gaming = false;
+                                }
+                                else
+                                {
+                                    gaming = true;
+                                }
+                                break;
+                            case "expensive":
+                                if (xmlNode2.InnerText == "false")
+                                {
+                                    expensive = false;
+                                }
+                                else
+                                {
+                                    expensive = true;
+                                }
+                                break;
+                            case "backlit keyboard":
+                                if (xmlNode2.InnerText == "false")
+                                {
+                                    backlit = false;
+                                }
+                                else
+                                {
+                                    backlit = true;
+                                }
+                                break;
+                            default:
+                                break;
+                        }
                     }
-                    Console.WriteLine();
                 }
-
             }
-
-
+            Fact fact = new Fact(id, desc);
+            
         }
 
         public FactRepository GetfactRepository()

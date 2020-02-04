@@ -4,17 +4,13 @@ using System.Text;
 
 namespace ExpertSystem
 {
-    class ESProvider
+    public class ESProvider
     {
         public FactRepository factRepository;
-
         public ESProvider(FactParser factParser, RuleParser ruleParser)
         {
-<<<<<<< HEAD
             factRepository = factParser.GetfactRepository();
-=======
-            FactRepository factRepo = new FactRepository();
->>>>>>> afa2477db1ee7425a968dcebd1830839d9d4e141
+            // FactRepository factRepo = new FactRepository();
         }
 
         public void collectAnswers()

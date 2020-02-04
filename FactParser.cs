@@ -10,9 +10,9 @@ namespace ExpertSystem
             throw new NotImplementedException();
         }
 
-        /*public FactRepository GetfactRepository()
+        public FactRepository GetfactRepository()
         {
 
-        }*/
+        }
     }
 }

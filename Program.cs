@@ -8,6 +8,9 @@ namespace ExpertSystem
     {
         static void Main(string[] args)
         {
+            FactParser factParser = new FactParser();
+            RuleParser ruleParser = new RuleParser();
+            ESProvider eSProvider = new ESProvider(factParser, ruleParser);
             bool loop = true;
             while (loop)
             {

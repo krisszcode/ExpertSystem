@@ -6,58 +6,46 @@ namespace ExpertSystem
     {
         string ID { get; set; }
         string Description { get; set; }
-        bool Portable { get; set; }
-        bool Gaming { get; set; }
-        bool Expensive { get; set; }
-        bool BacklitKeyboard { get; set; }
-
+        Dictionary<string, bool> facts = new Dictionary<string, bool>();
+        
         public Fact(string id, string description)
         {
             ID = id;
             Description = description;
         }
-        public List<string> GetIDList()
+
+        public Dictionary<string, bool> GetIDList()
         {
-            List<string> iDList = new List<string>() { "Portable", "Gaming", "Expensive", "BacklitKeyboard" };
-            return iDList;
+            Dictionary<string, bool> properties = new Dictionary<string, bool>();
+            foreach (KeyValuePair<string, bool> item in facts)
+            {
+                properties.Add(item.Key, true);
+            }
+            return properties;
         }
+
         public void SetFactValueByID(string id, bool value)
         {
-            switch (id)
+            foreach (KeyValuePair<string, bool> item in facts)
             {
-                case "Portable":
-                    Portable = value;
-                    break;
-                case "Gaming":
-                    Gaming = value;
-                    break;
-                case "Expensive":
-                    Expensive = value;
-                    break;
-                case "BackLitKeyboard":
-                    BacklitKeyboard = value;
-                    break;
-                default:
-                    break;
+                if (item.Key == id)
+                {
+                    facts[item.Key] = value;
+                }
             }
         }
-        public bool GetValueByID(string id)
+        public bool? GetValueByID(string id)
         {
-            switch (id)
+            foreach (KeyValuePair<string, bool> item in facts)
             {
-                case "Portable":
-                    return Portable;
-                case "Gaming":
-                    return Gaming;
-                case "Expensive":
-                    return Expensive;
-                case "BackLitKeyboard":
-                    return BacklitKeyboard;
-                default:
-                    Console.WriteLine("wrong id");
-                    return false;
+                if (item.Key == id)
+                {
+                    return item.Value;
+                }
             }
+            return null;
         }
+
         public string GetDescription()
         {
             return Description;

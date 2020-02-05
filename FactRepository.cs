@@ -8,6 +8,7 @@ namespace ExpertSystem
     public class FactRepository
     {
         public static List<Fact> factList = new List<Fact>();
+
         public FactRepository()
         {
             FactEnumerator factEnumerator = new FactEnumerator();
@@ -25,35 +26,51 @@ namespace ExpertSystem
         {
             return new FactEnumerator();
         }
+
+
         public class FactEnumerator : IEnumerator<Fact>
         {
             int index = -1;
 
-            object IEnumerator.Current => throw new NotImplementedException();
-
-            Fact IEnumerator<Fact>.Current => throw new NotImplementedException();
-
-            public void Dispose()
-            {
-            }
             public Fact Current
             {
                 get
                 {
-                    return factList[index];
+                    return Current;
                 }
             }
+
+            object IEnumerator.Current
+            {
+                get
+                {
+                    try
+                    {
+                        return factList[index];
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        throw new InvalidOperationException();
+                    }
+                }
+            }
+
+
+            public void Dispose()
+            {
+            }
+
             public bool MoveNext()
             {
                 index++;
                 return index < factList.Count;
-                throw new NotImplementedException();
             }
 
             public void Reset()
             {
-                throw new InvalidOperationException();
+                index = -1;
             }
         }
     }
 }
+                        

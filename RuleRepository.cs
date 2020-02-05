@@ -7,25 +7,35 @@ namespace ExpertSystem
 {
     public class RuleRepository
     {
-
-         static List<Question> ListOfQuestions = new List<Question>();
+       
+        static List<Question> ListOfQuestions = new List<Question>();
 
 
         class QuestionEnumerator : IEnumerator<Question> //UML rajz iterator interface
         {
             int index = -1;
 
+            public Question Current {
+            get
+                {
+                    return Current;
+                }
+                    }
 
-
-            object IEnumerator.Current
-            {
+            object IEnumerator.Current {
                 get
                 {
-                    return ListOfQuestions[index];
+                    try
+                    {
+                        return ListOfQuestions[index];
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        throw new InvalidOperationException();
+                    }
                 }
             }
 
-            Question IEnumerator<Question>.Current => throw new NotImplementedException();
 
             public void Dispose()
             {
@@ -39,7 +49,7 @@ namespace ExpertSystem
 
             public void Reset()
             {
-                throw new InvalidOperationException();
+                index = -1;
             }
         }
 
@@ -52,6 +62,7 @@ namespace ExpertSystem
         {
             return new QuestionEnumerator();
         }
-
+        
+        }
     }
-}
+

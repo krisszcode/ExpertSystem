@@ -6,7 +6,9 @@ namespace ExpertSystem
 {
     public class ESProvider
     {
-        //public FactRepository factRepo;
+        public FactRepository factRepo;
+        public RuleRepository ruleRepo;
+        Dictionary<string, bool> questionDict = new Dictionary<string, bool>();
 
         public ESProvider(FactParser factParser, RuleParser ruleParser)
         {

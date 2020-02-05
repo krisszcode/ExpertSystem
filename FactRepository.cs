@@ -13,6 +13,10 @@ namespace ExpertSystem
             FactEnumerator factEnumerator = new FactEnumerator();
         }
 
+        public List<Fact> addide()
+        {
+            return factList;
+        }
         public void AddFact(Fact fact)
         {
             factList.Add(fact);

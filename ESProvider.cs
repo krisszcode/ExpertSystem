@@ -6,27 +6,28 @@ namespace ExpertSystem
 {
     public class ESProvider
     {
-        //public FactRepository factRepo;
+        public FactRepository factRepo;
+        public RuleRepository ruleRepo;
 
         public ESProvider(FactParser factParser, RuleParser ruleParser)
         {
-            FactRepository factRepo = factParser.GetfactRepository();
-            // FactRepository factRepo = new FactRepository();
+            factRepo = factParser.GetFactRepository();
+            ruleRepo = ruleParser.GetRuleRepository();
         }
 
         public void collectAnswers()
         {
-
+            
         }
 
         public Boolean getAnswerByQuestion(string questionId)
         {
-
+            return false; // until you finished it
         }
 
         public string evaluate()
         {
-
+            return "string"; // until you finished it
         }
 
     }

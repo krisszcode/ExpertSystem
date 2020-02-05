@@ -26,13 +26,11 @@ namespace ExpertSystem
 
         public void SetFactValueByID(string id, bool value)
         {
-            foreach (KeyValuePair<string, bool> item in facts)
+            if (!facts.ContainsKey(id))
             {
-                if (item.Key == id)
-                {
-                    facts[item.Key] = value;
-                }
+                facts.Add(id, false);
             }
+            facts[id] = value;
         }
         public bool? GetValueByID(string id)
         {
@@ -49,6 +47,20 @@ namespace ExpertSystem
         public string GetDescription()
         {
             return Description;
+        }
+        public string GetID()
+        {
+            return ID;
+        }
+        public override string ToString()
+        {
+            string valami = ID + "-" + Description + "-";
+            foreach (KeyValuePair<string,bool> item in facts)
+            {
+                valami += item.Key + "-";
+                valami += item.Value.ToString() + "-";
+            }
+            return valami;
         }
     }
 }

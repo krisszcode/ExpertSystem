@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using static ExpertSystem.toolbox;
+using System.Collections.Generic;
 
 namespace ExpertSystem
 {
@@ -8,10 +9,11 @@ namespace ExpertSystem
     {
         FactParser factParser = new FactParser();
         RuleParser ruleParser = new RuleParser();
-         
+        static ESProvider eSProvider;
+
         public Program()
         {
-            ESProvider eSProvider = new ESProvider(factParser, ruleParser);
+            eSProvider = new ESProvider(factParser, ruleParser);
         }
 
         static void Main(string[] args)
@@ -48,7 +50,9 @@ namespace ExpertSystem
             switch (choice)
             {
                 case "1":
-                    //ide hogy mit csinal
+                    Console.WriteLine("Test facts.xml");
+                    TestXml();
+                    Console.ReadKey();
                     return true;
                 case "2":
                     //ide hogy mit csinal
@@ -83,5 +87,15 @@ namespace ExpertSystem
                     return true;
             }
         }
+        public static void TestXml()
+        {
+            List<Fact> myfacts = eSProvider.factRepo.addide();
+            foreach (Fact fact in myfacts)
+            {
+                Console.WriteLine(fact.ToString());
+            }
+
+
+        } 
     }
 }

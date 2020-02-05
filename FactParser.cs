@@ -117,6 +117,10 @@ namespace ExpertSystem
             fact.SetFactValueByID("expensive", expensive);
             fact.SetFactValueByID("backlit keyboard", backlit);
             factRepository.AddFact(fact);*/
+
+
+
+
         }
     }
 }

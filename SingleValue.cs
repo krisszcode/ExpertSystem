@@ -8,7 +8,7 @@ namespace ExpertSystem
     {
         string Param { get; set; }
         private bool selectionType { get; set; }
-        SingleValue(String Param, bool selectionType)
+        public SingleValue(String Param, bool selectionType)
         {
             this.Param = Param;
             this.selectionType = selectionType;
@@ -16,12 +16,9 @@ namespace ExpertSystem
 
         public override List<string> getInputPattern()
         {
-            List<string> copy = new List<string>
-            {
-                Param
-            };
-
-            return copy;
+            List<string> copy = new List<string>();
+            copy.Add(Param);
+            return copy; // thanks Milan
         }
 
         public override bool getSelectionType()

@@ -7,7 +7,7 @@ namespace ExpertSystem
 {
     public class FactRepository
     {
-        public List<Fact> factList = new List<Fact>();
+        public static List<Fact> factList = new List<Fact>();
         public FactRepository()
         {
             FactEnumerator factEnumerator = new FactEnumerator();
@@ -19,15 +19,11 @@ namespace ExpertSystem
         }
         public IEnumerator<Fact> GetEnumerator()
         {
-
+            return new FactEnumerator();
         }
         public class FactEnumerator : IEnumerator<Fact>
         {
             int index = -1;
-            public Fact Current()
-            {
-                return factList[index];
-            }
 
             object IEnumerator.Current => throw new NotImplementedException();
 
@@ -36,7 +32,13 @@ namespace ExpertSystem
             public void Dispose()
             {
             }
-
+            public Fact Current
+            {
+                get
+                {
+                    return factList[index];
+                }
+            }
             public bool MoveNext()
             {
                 index++;

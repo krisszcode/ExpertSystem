@@ -15,12 +15,15 @@ namespace ExpertSystem
         {
             int index = -1;
 
-            public Question Current()
-            {
-                return ListOfQuestions[index];
-            }
 
-            object IEnumerator.Current => throw new NotImplementedException();
+
+            object IEnumerator.Current
+            {
+                get
+                {
+                    return ListOfQuestions[index];
+                }
+            }
 
             Question IEnumerator<Question>.Current => throw new NotImplementedException();
 
@@ -30,7 +33,8 @@ namespace ExpertSystem
 
             public bool MoveNext()
             {
-                return ++index < ListOfQuestions.Count;
+                index++;
+                return index < ListOfQuestions.Count;
             }
 
             public void Reset()

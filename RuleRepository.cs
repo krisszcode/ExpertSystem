@@ -9,23 +9,34 @@ namespace ExpertSystem
     {
 
         static List<Question> ListOfQuestions = new List<Question>();
-        
 
-         class QuestionEnumerator : IEnumerator<Question> //UML rajz iterator interface
+
+        class QuestionEnumerator : IEnumerator<Question> //UML rajz iterator interface
         {
+            int index = -1;
 
-            private int index = -1;
-
-              bool HasNext()
-             {
-                return index < ListOfQuestions.Count;
-             }
-
-            public IEnumerator<Question> Next()
+            public Question Current()
             {
-                return ListOfQuestions[index++];
+                return ListOfQuestions[index];
             }
 
+            object IEnumerator.Current => throw new NotImplementedException();
+
+            Question IEnumerator<Question>.Current => throw new NotImplementedException();
+
+            public void Dispose()
+            {
+            }
+
+            public bool MoveNext()
+            {
+                return ++index < ListOfQuestions.Count;
+            }
+
+            public void Reset()
+            {
+                throw new InvalidOperationException();
+            }
         }
 
         public void AddQuestion(Question question)

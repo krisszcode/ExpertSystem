@@ -9,7 +9,7 @@ namespace ExpertSystem
 
         public RuleRepository GetRuleRepository()
         {
-            return null;
+            return new RuleRepository();
         }
 
 

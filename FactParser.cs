@@ -7,6 +7,16 @@ namespace ExpertSystem
 {
     public class FactParser : XMLParser
     {
+        FactRepository factRepository;
+
+        public FactRepository GetfactRepository()
+        {
+            FactRepository factRepository = new FactRepository();
+            this.factRepository = factRepository;
+            LoadXmlDocument("Fact.xml");
+            return factRepository;
+        }
+
         public override void LoadXmlDocument(string XMLPath)
         {
             string id = "";
@@ -57,14 +67,7 @@ namespace ExpertSystem
             fact.SetFactValueByID("gaming", gaming);
             fact.SetFactValueByID("expensive", expensive);
             fact.SetFactValueByID("backlit keyboard", backlit);
-            
-            
-        }
-
-        public FactRepository GetfactRepository()
-        {
-            FactRepository factRepository = new FactRepository();
-            return factRepository;
+            factRepository.AddFact(fact);
         }
     }
 }

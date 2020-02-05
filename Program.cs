@@ -8,7 +8,7 @@ namespace ExpertSystem
     {
         FactParser factParser = new FactParser();
         RuleParser ruleParser = new RuleParser();
-
+         
         public Program()
         {
             ESProvider eSProvider = new ESProvider(factParser, ruleParser);

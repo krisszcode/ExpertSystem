@@ -62,6 +62,7 @@ namespace ExpertSystem
                     return true;
                 case "3":
                     eSProvider.collectAnswers();
+                    
                     //ide hogy mit csinal
                     return true;
                 case "4":

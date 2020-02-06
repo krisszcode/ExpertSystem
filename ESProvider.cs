@@ -11,7 +11,8 @@ namespace ExpertSystem
         public RuleRepository ruleRepo;
         public FactParser factParser;
         public RuleParser ruleParser;
-        IEnumerator<Question> myenum;
+        IEnumerator<Question> myenumrule;
+        IEnumerator<Fact> myenumfact;
 
         Dictionary<string, bool> result = new Dictionary<string, bool>();
 
@@ -23,7 +24,8 @@ namespace ExpertSystem
             ruleRepo = ruleParser.GetRuleRepository();
             this.factParser = factParser;
             this.ruleParser = ruleParser;
-            myenum = ruleRepo.GetEnumerator();
+            myenumrule = ruleRepo.GetEnumerator();
+            myenumfact = factRepo.GetEnumerator();
         }
 
         public void collectAnswers()
@@ -31,23 +33,40 @@ namespace ExpertSystem
             bool answer;
             string id;
             
-            while (myenum.MoveNext())
+            while (myenumrule.MoveNext())
             {
-                string question = myenum.Current.GetQuestion();
-                id = myenum.Current.GetID();
+                string question = myenumrule.Current.GetQuestion();
+                id = myenumrule.Current.GetID();
                 answer = getAnswerByQuestion(id);
                 result.Add(id, answer);
             }
+            foreach (var keyValuePair in result)
+            {
+                Console.WriteLine(keyValuePair.Key + " -" + keyValuePair.Value);
+            }
+            Console.ReadLine();
         }
 
         public Boolean getAnswerByQuestion(string questionId)
         {
-            return myenum.Current.GetEvalutedAnswer(AnyInput(myenum.Current.GetQuestion()));
+            return myenumrule.Current.GetEvalutedAnswer(AnyInput(myenumrule.Current.GetQuestion()));
         }
 
         public string evaluate()
         {
-            return "string"; // until you finished it
+            string computer = "";
+
+            while (myenumfact.MoveNext())
+            {
+                foreach (KeyValuePair<string, bool> item in result)
+                {
+                    if (item.Value == myenumfact.Current.GetValueByID(item.Key))
+                    {
+
+                    }
+                }
+            }
+            return computer;
         }
 
     }

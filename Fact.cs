@@ -6,7 +6,7 @@ namespace ExpertSystem
     {
         string ID { get; set; }
         string Description { get; set; }
-        Dictionary<string, bool> facts = new Dictionary<string, bool>();
+        public Dictionary<string, bool> facts = new Dictionary<string, bool>();
         
         public Fact(string id, string description)
         {
@@ -32,7 +32,7 @@ namespace ExpertSystem
             }
             facts[id] = value;
         }
-        public bool? GetValueByID(string id)
+        public bool GetValueByID(string id)
         {
             foreach (KeyValuePair<string, bool> item in facts)
             {
@@ -41,7 +41,7 @@ namespace ExpertSystem
                     return item.Value;
                 }
             }
-            return null;
+            return false;
         }
 
         public string GetDescription()

@@ -55,7 +55,7 @@ namespace ExpertSystem
 
         public string evaluate()
         {
-
+            Console.WriteLine("Your best option(s) are: ");
             while (myenumfact.MoveNext())
             {
 
@@ -74,7 +74,7 @@ namespace ExpertSystem
         {
 
 
-            Console.WriteLine("Your best options are:");
+            Console.WriteLine("Your best option(s) are:");
             while (myenumfact.MoveNext())
             {
 

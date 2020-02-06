@@ -45,13 +45,19 @@ namespace ExpertSystem
             switch (choice)
             {
                 case "1":
+                    Console.Clear();
                     eSProvider.collectAnswers();
                     Console.WriteLine(eSProvider.evaluate());
+                    Console.WriteLine();
+                    Console.WriteLine("Press enter to continue...");
                     Console.ReadKey();
                     return true;
                 case "2":
+                    Console.Clear();
                     eSProvider.collectAnswers();
                     eSProvider.evaluate2();
+                    Console.WriteLine();
+                    Console.WriteLine("Press enter to continue...");
                     Console.ReadKey();
                     //ide hogy mit csinal
                     return true;

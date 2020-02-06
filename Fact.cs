@@ -6,6 +6,8 @@ namespace ExpertSystem
     {
         string ID { get; set; }
         string Description { get; set; }
+
+      
         public Dictionary<string, bool> facts = new Dictionary<string, bool>();
         
         public Fact(string id, string description)

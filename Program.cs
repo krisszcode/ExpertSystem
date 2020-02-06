@@ -30,12 +30,26 @@ namespace ExpertSystem
         static void Menu()
         {
             Console.Clear();
-            Console.WriteLine("Welcome to the Raj Mahal!");
+            Console.WriteLine("                Welcome to the Raj Mahal! ");
+            Console.WriteLine("------------------------------------------------------------------");
+            Console.WriteLine("           'Experts of the year' awarded service");
             Console.WriteLine();
-            Console.WriteLine("(1) Run Krisz");
-            Console.WriteLine("(2) Run Viktor");
-            Console.WriteLine("(3) Run Zoli");
-            Console.WriteLine("(0) Exit Program");
+            Console.WriteLine("           Choose one of the available expert...");
+            Console.WriteLine();
+            Console.WriteLine("------------------------------------------------------------------");
+            Console.WriteLine("         Status                 Experts");
+            Console.WriteLine("------------------------------------------------------------------");
+            Console.WriteLine("(1) -   Available   - Anand Lal Krisz from Mumbai");
+            Console.WriteLine("(2) -   Available   - Mukherjee Bawa Viktor from Raipur");
+            Console.WriteLine("(3) -   Available   - Gupta Kumar Zoltan from Bangalore");
+            Console.WriteLine("(4) -   Available   - Kapoor Singh Erik from Rajasthan");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine("(5) - Not Available - Rajesh Ramayan Koothrappali from New Delhi");
+            Console.WriteLine("(6) - Not Available - Byomkesh Bakshi from Mangalore");
+            Console.WriteLine("(7) - Not Available - Apu Nahasapeemapetilon from Jabalpur");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine();
+            Console.WriteLine("(0) Exit (or in that case you just wanted to Google 'Taj Mahal')");
             Console.WriteLine();
         }
         static bool Choose()
@@ -46,6 +60,7 @@ namespace ExpertSystem
                 case "1":
                     Console.Clear();
                     eSProvider.collectAnswers();
+                    Console.WriteLine();
                     Console.WriteLine(eSProvider.evaluate());
                     Console.WriteLine();
                     Console.WriteLine("Press enter to continue...");
@@ -54,20 +69,44 @@ namespace ExpertSystem
                 case "2":
                     Console.Clear();
                     eSProvider.collectAnswers();
+                    Console.WriteLine();
                     eSProvider.evaluate2();
                     Console.WriteLine();
                     Console.WriteLine("Press enter to continue...");
                     Console.ReadKey();
-                    //ide hogy mit csinal
                     return true;
                 case "3":
                     Console.Clear();
                     eSProvider.collectAnswers();
+                    Console.WriteLine();
                     Console.WriteLine(eSProvider.evaluate1());
                     Console.WriteLine();
                     Console.WriteLine("Press enter to continue...");
                     Console.ReadKey();
-                    //ide hogy mit csinal
+                    return true;
+                case "4":
+                    Console.Clear();
+                    eSProvider.collectAnswers();
+                    Console.WriteLine();
+                    Console.WriteLine(eSProvider.evaluate1());
+                    Console.WriteLine();
+                    Console.WriteLine("Press enter to continue...");
+                    Console.ReadKey();
+                    return true;
+                case "5":
+                    Console.Clear();
+                    Console.WriteLine("Currently sitting in the jacuzzi of Howard Wolowitz with Stuart.");
+                    Console.ReadKey();
+                    return true;
+                case "6":
+                    Console.Clear();
+                    Console.WriteLine("Ask Sherlock Holmes. Maybe he has a clue.");
+                    Console.ReadKey();
+                    return true;
+                case "7":
+                    Console.Clear();
+                    Console.WriteLine("Drinking with Homer.");
+                    Console.ReadKey();
                     return true;
                 case "0":
                     Console.WriteLine("Bye, bye...");

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Facts>
     <Fact id="sparpc">
-        <Description value="Spar putri PC"/>
+        <Description value="Spar crap PC"/>
         <Evals>
             <Eval id="portable">false</Eval>
             <Eval id="gaming">false</Eval>
@@ -18,8 +18,8 @@
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
-	<Fact id="gamingszamito">
-        <Description value="Konvektoros Asztali gaming számító NoLight Edition"/>
+	<Fact id="gamingcomputer">
+        <Description value="Desktop gaming VeryLight Edition by Tesco"/>
         <Evals>
             <Eval id="portable">false</Eval>
             <Eval id="gaming">true</Eval>
@@ -28,7 +28,7 @@
         </Evals>
     </Fact>
 	<Fact id="AlienwareUFO">
-        <Description value="Alienware UFOAttack LampaLekapcsolos Edition"/>
+        <Description value="Alienware UFOAttack Blackout Edition"/>
         <Evals>
             <Eval id="portable">false</Eval>
             <Eval id="gaming">true</Eval>
@@ -45,8 +45,8 @@
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
-	<Fact id="MacSajtreszelo">
-        <Description value="iMac iSajtreszelő PC "/>
+	<Fact id="MacAndCheese">
+        <Description value="iMac and Cheese Pro - Cheesegrater edition "/>
         <Evals>
             <Eval id="portable">false</Eval>
             <Eval id="gaming">false</Eval>
@@ -64,7 +64,7 @@
         </Evals>
     </Fact>
 	<Fact id="Razor">
-        <Description value="Razor PredatorWare Egirl Pink Blacklit Edition"/>
+        <Description value="Razor PredatorWare Egirl Pink Blacklit Edition (dildo sold separately)"/>
         <Evals>
             <Eval id="portable">false</Eval>
             <Eval id="gaming">true</Eval>
@@ -73,7 +73,7 @@
         </Evals>
     </Fact>
 	<Fact id="laptop1">
-        <Description value="Hurcolhato Nagykepernyos Internetezos Dell Szamito Laptop"/>
+        <Description value="Portable Bigscreen Dell PC Internet edition"/>
         <Evals>
             <Eval id="portable">true</Eval>
             <Eval id="gaming">false</Eval>
@@ -90,8 +90,8 @@
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
-	<Fact id="Primitiv">
-        <Description value="Primitiv Mocsari Harcos XXX Laptop"/>
+	<Fact id="Primitive">
+        <Description value="Primitive Swampwarrior XXX Laptop"/>
         <Evals>
             <Eval id="portable">true</Eval>
             <Eval id="gaming">true</Eval>
@@ -100,7 +100,7 @@
         </Evals>
     </Fact>
 	<Fact id="HyperXSamsung">
-        <Description value="HyperX Samsung Batelfild szamito"/>
+        <Description value="HyperX Samsung Bagelfild comp"/>
         <Evals>
             <Eval id="portable">true</Eval>
             <Eval id="gaming">true</Eval>
@@ -108,8 +108,8 @@
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
-	<Fact id="macbook">
-        <Description value="Bolondos hordozható almas szamito laptop "/>
+	<Fact id="Mekkbook">
+        <Description value="Silly portable laptop for bearded goofy goats, Starbucks edition"/>
         <Evals>
             <Eval id="portable">false</Eval>
             <Eval id="gaming">false</Eval>
@@ -117,8 +117,8 @@
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
-	<Fact id="Ugynoki">
-        <Description value="Ugynoki Titkos Rejtett Szamito Laptop"/>
+	<Fact id="Agent">
+        <Description value="Agent Fury stolen Laptop, slightly used (some bullethole, scratch nothing serious)"/>
         <Evals>
             <Eval id="portable">true</Eval>
             <Eval id="gaming">false</Eval>
@@ -126,8 +126,8 @@
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
-	<Fact id="Dolgozhato">
-        <Description value="Vilagos Dolgozhato Szamolo Szamito Laptop"/>
+	<Fact id="JustforWork">
+        <Description value="Light working PC with celeron"/>
         <Evals>
             <Eval id="portable">true</Eval>
             <Eval id="gaming">false</Eval>
@@ -135,8 +135,8 @@
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
-	<Fact id="Aramszamla">
-        <Description value="Acer Aramszamla Megboritos Gaming Laptop"/>
+	<Fact id="Electricbill">
+        <Description value="Acer Electricbill Allgodies Gaming Laptop"/>
         <Evals>
             <Eval id="portable">true</Eval>
             <Eval id="gaming">true</Eval>

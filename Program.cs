@@ -32,15 +32,10 @@ namespace ExpertSystem
             Console.Clear();
             Console.WriteLine("Welcome to the Raj Mahal!");
             Console.WriteLine();
-            Console.WriteLine("(1) option 1");
-            Console.WriteLine("(2) option 2");
-            Console.WriteLine("(3) option 3");
-            Console.WriteLine("(4) option 4");
-            Console.WriteLine("(5) option 5");
-            Console.WriteLine("(6) option 6");
-            Console.WriteLine("(7) option 7");
-            Console.WriteLine("(8) option 8");
-            Console.WriteLine("(9) option 9");
+            Console.WriteLine("(1) Run Krisz");
+            Console.WriteLine("(2) Run Viktor");
+
+
             Console.WriteLine("(0) Exit Program");
             Console.WriteLine();
         }
@@ -50,39 +45,17 @@ namespace ExpertSystem
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine("Test facts.xml");
-                    TestXml();
-                    Console.ReadKey();
-                    return true;
-                case "2":
-                    Console.WriteLine("Test facts.xml");
-                    TestXmlrule();
-                    Console.ReadKey();
-                    //ide hogy mit csinal
-                    return true;
-                case "3":
                     eSProvider.collectAnswers();
                     Console.WriteLine(eSProvider.evaluate());
                     Console.ReadKey();
                     return true;
-                case "4":
+                case "2":
+                    eSProvider.collectAnswers();
+                    eSProvider.evaluate2();
+                    Console.ReadKey();
                     //ide hogy mit csinal
                     return true;
-                case "5":
-                    //ide hogy mit csinal
-                    return true;
-                case "6":
-                    //ide hogy mit csinal
-                    return true;
-                case "7":
-                    //ide hogy mit csinal
-                    return true;
-                case "8":
-                    //ide hogy mit csinal
-                    return true;
-                case "9":
-                    //ide hogy mit csinal
-                    return true;
+             
                 case "0":
                     Console.WriteLine("Bye, bye...");
                     return false;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Linq;
 using static ExpertSystem.toolbox;
@@ -12,7 +13,7 @@ namespace ExpertSystem
         public RuleRepository ruleRepo;
         public FactParser factParser;
         public RuleParser ruleParser;
-        IEnumerator<Question> myenum;
+        IEnumerator<Question> myenumrule;
         IEnumerator<Fact> myenumfact;
 
         Dictionary<string, bool> result = new Dictionary<string, bool>();
@@ -25,7 +26,7 @@ namespace ExpertSystem
             ruleRepo = ruleParser.GetRuleRepository();
             this.factParser = factParser;
             this.ruleParser = ruleParser;
-            myenum = ruleRepo.GetEnumerator();
+            myenumrule = ruleRepo.GetEnumerator();
             myenumfact = factRepo.GetEnumerator();
         }
 
@@ -33,40 +34,58 @@ namespace ExpertSystem
         {
             result.Clear();
             myenumfact.Reset();
-            myenum.Reset();
+            myenumrule.Reset();
             bool answer;
             string id;
-            
-            while (myenum.MoveNext())
+
+            while (myenumrule.MoveNext())
             {
-                string question = myenum.Current.GetQuestion();
-                id = myenum.Current.GetID();
+                string question = myenumrule.Current.GetQuestion();
+                id = myenumrule.Current.GetID();
                 answer = getAnswerByQuestion(id);
                 result.Add(id, answer);
             }
+          
         }
 
         public Boolean getAnswerByQuestion(string questionId)
         {
-            return myenum.Current.GetEvalutedAnswer(AnyInput(myenum.Current.GetQuestion()));
+            return myenumrule.Current.GetEvalutedAnswer(AnyInput(myenumrule.Current.GetQuestion()));
         }
 
         public string evaluate()
         {
-            
+
             while (myenumfact.MoveNext())
             {
-                
+
                 var res = result.Except(myenumfact.Current.GetIDList());
                 if (res.Count() == 0)
                 {
                     return myenumfact.Current.GetDescription();
-                   
+
                 }
 
             }
             return "error";
-            
+        }
+
+        public void evaluate2()
+        {
+
+
+            Console.WriteLine("Your best options are:");
+            while (myenumfact.MoveNext())
+            {
+
+                if (result.Except(myenumfact.Current.facts).Count() == 0)
+                {
+                    Console.WriteLine(myenumfact.Current.GetDescription());
+                }
+
+
+
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using static ExpertSystem.toolbox;
 
@@ -54,27 +55,17 @@ namespace ExpertSystem
 
 
 
-        public void evaluate()
+        public void evaluate2()
         {
-            string computer = "";
-
+            Console.WriteLine("Your best options are:");
             while (myenumfact.MoveNext())
             {
-                    if (result.Keys == myenumfact.Current.facts.Keys)
-                    {
-                        computer += "1";
-                    }
-
-                    if (result.Values.Equals(myenumfact.Current.facts.Values))
-                    {
-                        computer += "2";
-                    }
-
-                    if (computer.Equals("12"))
-
+                   
+                    if (result.Except(myenumfact.Current.facts).Count() == 0)
                     {
                     Console.WriteLine(myenumfact.Current.GetDescription());
                     }
+                
                     
               
                     

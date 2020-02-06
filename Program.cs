@@ -62,7 +62,7 @@ namespace ExpertSystem
                     return true;
                 case "3":
                     eSProvider.collectAnswers();
-                    eSProvider.evaluate();
+                    eSProvider.evaluate2();
                     Console.ReadKey();
 
                     

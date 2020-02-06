@@ -7,7 +7,8 @@ namespace ExpertSystem
     public class Answer
     {
 
-        public Value value;
+        //public Value value;
+        List<Value> values = new List<Value>();
         public bool evaluateAnswerByInput(String input)
         {
             if (input.ToUpper() == "YES")
@@ -26,7 +27,14 @@ namespace ExpertSystem
 
         public void addValue(Value value)
         {
-            this.value = value;
+            values.Add(value);
+            //this.value = value;
+        }
+        public override string ToString()
+        {
+            string vissza = values[0].ToString();
+            vissza += values[1].ToString();
+            return vissza;
         }
     }
 }

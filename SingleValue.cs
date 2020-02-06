@@ -25,5 +25,9 @@ namespace ExpertSystem
         {
             return this.selectionType;
         }
+        public override string ToString()
+        {
+            return Param + selectionType.ToString();
+        }
     }
 }

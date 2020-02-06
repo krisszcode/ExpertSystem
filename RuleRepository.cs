@@ -8,7 +8,7 @@ namespace ExpertSystem
     public class RuleRepository
     {
        
-        static List<Question> ListOfQuestions = new List<Question>();
+        public static List<Question> ListOfQuestions = new List<Question>();
 
 
         class QuestionEnumerator : IEnumerator<Question> //UML rajz iterator interface
@@ -18,7 +18,14 @@ namespace ExpertSystem
             public Question Current {
             get
                 {
-                    return Current;
+                    try
+                    {
+                        return ListOfQuestions[index];
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        throw new InvalidOperationException();
+                    }
                 }
                     }
 
@@ -63,6 +70,11 @@ namespace ExpertSystem
             return new QuestionEnumerator();
         }
         
+        public List<Question> addide()
+        {
+            return ListOfQuestions;
         }
+        
     }
+}
 

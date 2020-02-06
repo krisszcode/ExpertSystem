@@ -55,9 +55,13 @@ namespace ExpertSystem
                     Console.ReadKey();
                     return true;
                 case "2":
+                    Console.WriteLine("Test facts.xml");
+                    TestXmlrule();
+                    Console.ReadKey();
                     //ide hogy mit csinal
                     return true;
                 case "3":
+                    eSProvider.collectAnswers();
                     //ide hogy mit csinal
                     return true;
                 case "4":
@@ -96,6 +100,20 @@ namespace ExpertSystem
             }
 
 
-        } 
+        }
+        public static void TestXmlrule()
+        {
+            List<Question> myQue = eSProvider.ruleRepo.addide();
+            foreach (Question que in myQue)
+            {
+                //Console.WriteLine(que.GetID());
+                Console.WriteLine(que.GetQuestion());
+                Console.WriteLine(que.GetAnswer().ToString());
+                Console.WriteLine();
+
+            }
+
+
+        }
     }
 }

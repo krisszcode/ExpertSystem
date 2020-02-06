@@ -13,28 +13,21 @@ namespace ExpertSystem
             this.question = question;
             Answer = answer;
         }
-
         public string GetID()
         {
             return ID;
         }
-
-
         public string GetQuestion()
         {
             return question;
         }
-
         public Answer GetAnswer()
         {
             return Answer;
         }
-
         public bool GetEvalutedAnswer(string input)
         {
             return Answer.evaluateAnswerByInput(input);
         }
-
-       
     }
 }

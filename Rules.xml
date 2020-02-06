@@ -15,10 +15,10 @@
         <Question>Would you like playing with modern games?</Question>
         <Answer>
             <Selection value="true">
-                <SingleValue value="comfort"/>
+                <SingleValue value="yes"/>
             </Selection>
             <Selection value="false">
-                <SingleValue value="speed"/>
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>
@@ -26,10 +26,10 @@
         <Question>Do you have 300.000 Ft for the computer?</Question>
         <Answer>
             <Selection value="true">
-                <MultipleValue value="gps,bluetooth,dvd,automatic transmission,self-driving"/>
+                <SingleValue value="yes"/>
             </Selection>
             <Selection value="false">
-                <MultipleValue value="nothing,abs,fog lights,central lock"/>
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>
@@ -37,10 +37,10 @@
         <Question>Do you need backlit keyboard?</Question>
         <Answer>
             <Selection value="true">
-                <MultipleValue value="gps,bluetooth,dvd,automatic transmission,self-driving"/>
+                <SingleValue value="yes"/>
             </Selection>
             <Selection value="false">
-                <MultipleValue value="nothing,abs,fog lights,central lock"/>
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>

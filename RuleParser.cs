@@ -7,49 +7,61 @@ namespace ExpertSystem
 {
     public class RuleParser : XMLParser
     {
-        FactRepository factRepo;
-        
+        RuleRepository ruleRepository;
+
         public RuleParser()
         {
         }
 
         public RuleRepository GetRuleRepository()
         {
-            XmlDocument xmlDoc = base.LoadXmlDocument2("Rules.xml");
-            RuleRepository ruleRepo = new RuleRepository();
-
-            foreach (XmlNode node in xmlDoc.DocumentElement)
-            {
-                Answer ans = new Answer();
-                foreach (XmlNode node2 in node.ChildNodes[1].ChildNodes) //Answerben vagyunk
-                {
-                    string rules = node2.ChildNodes[0].Attributes["value"].Value; //"value", mert az a neve az XML fileban
-                    List<string> stringList = rules.Split(",").ToList<string>(); // Multiple, .Split(",")
-                    if (stringList.Count>1)
-                    {
-                        ans.addValue(new MultipleValue(stringList, Convert.ToBoolean(node2.Attributes["value"].Value)));
-                    }
-                    else if(stringList.Count == 1)
-                    {
-                        ans.addValue(new SingleValue(stringList[0], Convert.ToBoolean(node2.Attributes["value"].Value)));
-                    }
-                    else
-                    {
-                        throw new Exception("Value error!");
-                    }
-
-                }
-                Question question = new Question(node.Attributes["id"].Value, node.ChildNodes[0].InnerText, ans);
-                ruleRepo.AddQuestion(question);
-            }
-            return ruleRepo;
+            this.ruleRepository = new RuleRepository();
+            LoadXmlDocument("Rules.xml");
+            LoadRulesFromXML();
+            return ruleRepository;
         }
 
-
-
-        public override void LoadXmlDocument(string XMLPath)
+        private void LoadRulesFromXML()
         {
-            throw new NotImplementedException();
+            string qid = "";
+            string questio = "";
+            string param1 = "";
+            bool selectionType1 = false;
+            string param2 = "";
+            bool selectionType2 = false;
+            foreach (XmlNode xmlNode in xmlDoc.DocumentElement)
+            {
+                qid = xmlNode.Attributes[0].InnerText;
+                foreach (XmlNode xmlNode1 in xmlNode)
+                {
+                    if (xmlNode1.LocalName == "Question")
+                    {
+                        questio = xmlNode1.InnerText;
+                    }
+                    if (xmlNode1.LocalName == "Answer")
+                    {
+                        if (xmlNode1.ChildNodes[0].Attributes[0].Value == "true")
+                        {
+                            selectionType1 = true;
+                        }
+                        else{ selectionType1 = false; }
+                        param1 = xmlNode1.ChildNodes[0].ChildNodes[0].Attributes[0].Value;
+                        if (xmlNode1.ChildNodes[1].Attributes[0].Value == "true")
+                        {
+                            selectionType2 = true;
+                        }
+                        else{ selectionType2 = false; }
+                        param2 = xmlNode1.ChildNodes[1].ChildNodes[0].Attributes[0].Value;
+                    }
+                }
+                SingleValue singleValue1 = new SingleValue(param1, selectionType1);
+                SingleValue singleValue2 = new SingleValue(param2, selectionType2);
+                Answer answer = new Answer();
+                answer.addValue(singleValue1);
+                answer.addValue(singleValue2);
+                Question question = new Question(qid, questio, answer);
+                ruleRepository.AddQuestion(question);
+            }
         }
     }
 }

@@ -5,14 +5,12 @@ namespace ExpertSystem
 {
     public abstract class XMLParser
     {
-        public abstract void LoadXmlDocument(string XMLPath); // Zoli (FactParser)
+        protected XmlDocument xmlDoc;
 
-        public XmlDocument LoadXmlDocument2(string xmlPath) // thanks Milan
+        protected void LoadXmlDocument(string XMLPath)
         {
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(xmlPath);
-            return xmlDoc;
-        } // Load  .xml
-
+            xmlDoc = new XmlDocument();
+            xmlDoc.Load(XMLPath);
+        }
     }
 }

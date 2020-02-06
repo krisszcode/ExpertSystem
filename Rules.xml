@@ -22,7 +22,7 @@
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="budget">
+    <Rule id="expensive">
         <Question>Do you have 300.000 Ft for the computer? </Question>
         <Answer>
             <Selection value="true">
@@ -33,7 +33,7 @@
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="backlit">
+    <Rule id="backlit keyboard">
         <Question>Do you need backlit keyboard? </Question>
         <Answer>
             <Selection value="true">

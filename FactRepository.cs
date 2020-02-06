@@ -36,7 +36,14 @@ namespace ExpertSystem
             {
                 get
                 {
-                    return Current;
+                    try
+                    {
+                        return factList[index];
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        throw new InvalidOperationException();
+                    }
                 }
             }
 

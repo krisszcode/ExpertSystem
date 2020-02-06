@@ -45,9 +45,8 @@ namespace ExpertSystem
                 answer = getAnswerByQuestion(id);
                 result.Add(id, answer);
             }
-          
-        }
 
+        }
         public Boolean getAnswerByQuestion(string questionId)
         {
             return myenumrule.Current.GetEvalutedAnswer(AnyInput(myenumrule.Current.GetQuestion()));
@@ -65,15 +64,11 @@ namespace ExpertSystem
                     return myenumfact.Current.GetDescription();
 
                 }
-
             }
             return "error";
         }
-
         public void evaluate2()
         {
-
-
             Console.WriteLine("Your best option(s) are:");
             while (myenumfact.MoveNext())
             {
@@ -82,10 +77,26 @@ namespace ExpertSystem
                 {
                     Console.WriteLine(myenumfact.Current.GetDescription());
                 }
-
-
-
             }
+        }
+        public string evaluate1()
+        {
+            while (myenumfact.MoveNext())
+            {
+                int count = 0;
+                foreach (KeyValuePair<string, bool> item in result)
+                {
+                    if (item.Value == myenumfact.Current.GetValueByID(item.Key))
+                    {
+                        count++;
+                    }
+                }
+                if (count == 4)
+                {
+                    return "The recommended model is: " + myenumfact.Current.GetDescription();
+                }
+            }
+            return "error computer";
         }
     }
 }

@@ -34,8 +34,7 @@ namespace ExpertSystem
             Console.WriteLine();
             Console.WriteLine("(1) Run Krisz");
             Console.WriteLine("(2) Run Viktor");
-
-
+            Console.WriteLine("(3) Run Zoli");
             Console.WriteLine("(0) Exit Program");
             Console.WriteLine();
         }
@@ -61,7 +60,15 @@ namespace ExpertSystem
                     Console.ReadKey();
                     //ide hogy mit csinal
                     return true;
-             
+                case "3":
+                    Console.Clear();
+                    eSProvider.collectAnswers();
+                    Console.WriteLine(eSProvider.evaluate1());
+                    Console.WriteLine();
+                    Console.WriteLine("Press enter to continue...");
+                    Console.ReadKey();
+                    //ide hogy mit csinal
+                    return true;
                 case "0":
                     Console.WriteLine("Bye, bye...");
                     return false;

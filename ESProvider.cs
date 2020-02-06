@@ -52,21 +52,35 @@ namespace ExpertSystem
             return myenumrule.Current.GetEvalutedAnswer(AnyInput(myenumrule.Current.GetQuestion()));
         }
 
-        public string evaluate()
+
+
+        public void evaluate()
         {
             string computer = "";
 
             while (myenumfact.MoveNext())
             {
-                foreach (KeyValuePair<string, bool> item in result)
-                {
-                    if (item.Value == myenumfact.Current.GetValueByID(item.Key))
+                    if (result.Keys == myenumfact.Current.facts.Keys)
                     {
-
+                        computer += "1";
                     }
-                }
+
+                    if (result.Values.Equals(myenumfact.Current.facts.Values))
+                    {
+                        computer += "2";
+                    }
+
+                    if (computer.Equals("12"))
+
+                    {
+                    Console.WriteLine(myenumfact.Current.GetDescription());
+                    }
+                    
+              
+                    
+    
             }
-            return computer;
+            
         }
 
     }

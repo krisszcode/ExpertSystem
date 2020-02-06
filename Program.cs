@@ -62,6 +62,9 @@ namespace ExpertSystem
                     return true;
                 case "3":
                     eSProvider.collectAnswers();
+                    eSProvider.evaluate();
+                    Console.ReadKey();
+
                     
                     //ide hogy mit csinal
                     return true;

@@ -7,13 +7,16 @@ namespace ExpertSystem
         string ID { get; set; }
         string Description { get; set; }
 
-      
+        string Hardware { get; set; } // hardver hozza
+
+
         public Dictionary<string, bool> facts = new Dictionary<string, bool>();
         
-        public Fact(string id, string description)
+        public Fact(string id, string description, string hardware = "")
         {
             ID = id;
             Description = description;
+            Hardware = hardware;
         }
 
         public Dictionary<string, bool> GetIDList()
@@ -34,6 +37,8 @@ namespace ExpertSystem
             }
             facts[id] = value;
         }
+
+
         public bool GetValueByID(string id)
         {
             foreach (KeyValuePair<string, bool> item in facts)
@@ -54,6 +59,10 @@ namespace ExpertSystem
         {
             return ID;
         }
+
+
+
+
         public override string ToString()
         {
             string valami = ID + "-" + Description + "-";
@@ -63,6 +72,14 @@ namespace ExpertSystem
                 valami += item.Value.ToString() + "-";
             }
             return valami;
+        }
+
+
+
+
+        public string GetHarware()
+        {
+            return Hardware;
         }
     }
 }

@@ -69,13 +69,18 @@ namespace ExpertSystem
         }
         public void evaluate2()
         {
-            Console.WriteLine("Your best option(s) are:");
+            Console.WriteLine();
+            Console.WriteLine("According to our database, your best option(s) are:");
+            Console.WriteLine();
             while (myenumfact.MoveNext())
             {
 
                 if (result.Except(myenumfact.Current.facts).Count() == 0)
                 {
                     Console.WriteLine(myenumfact.Current.GetDescription());
+                    Console.WriteLine();
+                    Console.WriteLine("Hardware for the PC: \n");
+                    Console.WriteLine(myenumfact.Current.GetHarware());
                 }
             }
         }

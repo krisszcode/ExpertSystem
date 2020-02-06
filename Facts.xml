@@ -6,6 +6,7 @@
             <Eval id="portable">false</Eval>
             <Eval id="gaming">false</Eval>
             <Eval id="expensive">false</Eval>
+           <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
@@ -15,6 +16,7 @@
             <Eval id="portable">false</Eval>
             <Eval id="gaming">true</Eval>
             <Eval id="expensive">true</Eval>
+            <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
@@ -24,6 +26,7 @@
             <Eval id="portable">false</Eval>
             <Eval id="gaming">true</Eval>
             <Eval id="expensive">true</Eval>
+            <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
@@ -33,6 +36,7 @@
             <Eval id="portable">false</Eval>
             <Eval id="gaming">true</Eval>
             <Eval id="expensive">false</Eval>
+           <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
@@ -42,6 +46,7 @@
             <Eval id="portable">false</Eval>
             <Eval id="gaming">false</Eval>
             <Eval id="expensive">true</Eval>
+            <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
@@ -51,6 +56,7 @@
             <Eval id="portable">false</Eval>
             <Eval id="gaming">false</Eval>
             <Eval id="expensive">true</Eval>
+            <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
@@ -60,6 +66,7 @@
             <Eval id="portable">false</Eval>
             <Eval id="gaming">false</Eval>
             <Eval id="expensive">false</Eval>
+            <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
@@ -69,6 +76,7 @@
             <Eval id="portable">false</Eval>
             <Eval id="gaming">true</Eval>
             <Eval id="expensive">false</Eval>
+            <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
@@ -78,6 +86,7 @@
             <Eval id="portable">true</Eval>
             <Eval id="gaming">false</Eval>
             <Eval id="expensive">false</Eval>
+            <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
@@ -87,6 +96,7 @@
             <Eval id="portable">true</Eval>
             <Eval id="gaming">true</Eval>
             <Eval id="expensive">true</Eval>
+             <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
@@ -96,6 +106,7 @@
             <Eval id="portable">true</Eval>
             <Eval id="gaming">true</Eval>
             <Eval id="expensive">true</Eval>
+             <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
@@ -105,6 +116,7 @@
             <Eval id="portable">true</Eval>
             <Eval id="gaming">true</Eval>
             <Eval id="expensive">false</Eval>
+            <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
@@ -114,6 +126,7 @@
             <Eval id="portable">false</Eval>
             <Eval id="gaming">false</Eval>
             <Eval id="expensive">true</Eval>
+            <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
@@ -123,6 +136,7 @@
             <Eval id="portable">true</Eval>
             <Eval id="gaming">false</Eval>
             <Eval id="expensive">true</Eval>
+            <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">false</Eval>
         </Evals>
     </Fact>
@@ -132,6 +146,7 @@
             <Eval id="portable">true</Eval>
             <Eval id="gaming">false</Eval>
             <Eval id="expensive">false</Eval>
+            <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>
@@ -141,6 +156,7 @@
             <Eval id="portable">true</Eval>
             <Eval id="gaming">true</Eval>
             <Eval id="expensive">false</Eval>
+            <Eval id="hardware"></Eval>
 	    	<Eval id="backlit keyboard">true</Eval>
         </Evals>
     </Fact>

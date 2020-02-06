@@ -8,7 +8,7 @@ namespace ExpertSystem
     public class RuleRepository
     {
        
-        public static List<Question> ListOfQuestions = new List<Question>();
+        static List<Question> ListOfQuestions = new List<Question>();
 
 
         class QuestionEnumerator : IEnumerator<Question> //UML rajz iterator interface

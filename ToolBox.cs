@@ -70,5 +70,17 @@ namespace ExpertSystem
             if (text == "true") { return true; }
             else { return false; }
         }
+        public static string JustYesNo(string inputMessage)
+        {
+            while (true)
+            {
+                Console.Write(inputMessage);
+                string input = Console.ReadLine().ToLower();
+                if (input == "yes" || input == "no")
+                {
+                    return input;
+                }
+            }
+        }
     }
 }

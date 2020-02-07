@@ -91,7 +91,7 @@
         </Evals>
     </Fact>
 	<Fact id="RacerAligator">
-        <Description value="Racer Aligator Predator Gaming Laptop"/>
+        <Description value="Racer Alligator Predator Gaming Laptop"/>
         <Evals>
             <Eval id="portable">true</Eval>
             <Eval id="gaming">true</Eval>
@@ -111,7 +111,7 @@
         </Evals>
     </Fact>
 	<Fact id="HyperXSamsung">
-        <Description value="HyperX Samsung Bagelfild comp"/>
+        <Description value="HyperX Samsung Batelfild szamito"/>
         <Evals>
             <Eval id="portable">true</Eval>
             <Eval id="gaming">true</Eval>
@@ -121,9 +121,9 @@
         </Evals>
     </Fact>
 	<Fact id="Mekkbook">
-        <Description value="Silly portable laptop for bearded goofies, Starbucks edition"/>
+        <Description value="Hordozhato bolondos almas szamito"/>
         <Evals>
-            <Eval id="portable">false</Eval>
+            <Eval id="portable">true</Eval>
             <Eval id="gaming">false</Eval>
             <Eval id="expensive">true</Eval>
             <Eval id="hardware"></Eval>

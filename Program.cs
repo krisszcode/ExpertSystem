@@ -49,7 +49,7 @@ namespace ExpertSystem
             Console.WriteLine("(7) - Not Available - Apu Nahasapeemapetilon from Jabalpur");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine();
-            Console.WriteLine("(0) Exit (or in that case you just wanted to Google 'Taj Mahal')");
+            Console.WriteLine("(0) Exit (in that case you just wanted to Google 'Raj Mahal')");
             Console.WriteLine();
         }
         static bool Choose()
@@ -59,6 +59,7 @@ namespace ExpertSystem
             {
                 case "1":
                     Console.Clear();
+                    Console.WriteLine("Please answer 'yes' or 'no'.");
                     eSProvider.collectAnswers();
                     Console.WriteLine();
                     Console.WriteLine(eSProvider.evaluate());
@@ -68,6 +69,7 @@ namespace ExpertSystem
                     return true;
                 case "2":
                     Console.Clear();
+                    Console.WriteLine("Please answer 'yes' or 'no'.");
                     eSProvider.collectAnswers();
                     Console.WriteLine();
                     eSProvider.evaluate2();
@@ -77,6 +79,7 @@ namespace ExpertSystem
                     return true;
                 case "3":
                     Console.Clear();
+                    Console.WriteLine("Please answer 'yes' or 'no'.");
                     eSProvider.collectAnswers();
                     Console.WriteLine();
                     Console.WriteLine(eSProvider.evaluate1());
@@ -86,6 +89,7 @@ namespace ExpertSystem
                     return true;
                 case "4":
                     Console.Clear();
+                    Console.WriteLine("Please answer 'yes' or 'no'.");                   
                     eSProvider.collectAnswers();
                     Console.WriteLine();
                     Console.WriteLine(eSProvider.evaluate1());

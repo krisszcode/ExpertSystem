@@ -23,10 +23,10 @@ namespace ExpertSystem
             HardwareOfPCs.Add("Win95", "Processor: Intel i2 HQ4100-K,\nVideocard: Geforce GTX 1024 Ti 1024GB,\nRAM: 151GB DDR4 24124MHZ.\n");
             HardwareOfPCs.Add("Razor", "Processor: Intel i1 HQ4100-K,\nVideocard: Geforce GTX 1072 Ti 256GB,\nRAM: 153GB DDR4 24234MHZ.\n");
             HardwareOfPCs.Add("laptop1", "Processor: Intel i4 HQ4100-K,\nVideocard: Geforce GTX 1015 Ti 126GB,\nRAM: 154GB DDR4 2476MHZ.\n");
-            HardwareOfPCs.Add("RacerAligator", "Processor: Intel i6 HQ4100-K,\nVideocard: Geforce GTX 1063 Ti 2GB,\nRAM: 125GB DDR4 2434MHZ.\n");
+            HardwareOfPCs.Add("RacerAligator", "Processor: Intel i6 HQ4100-K,\nVideocard: Geforce GTX 420 Ti 2GB,\nRAM: 69GB DDR4 360MHZ.\n");
             HardwareOfPCs.Add("Primitive", "Processor: Intel i7 HQ4100-K,\nVideocard: Geforce GTX 10123 Ti 4GB,\nRAM: 151GB DDR4 2474MHZ.\n");
             HardwareOfPCs.Add("HyperXSamsung", "Processor: Intel i3 HQ4100-K,\nVideocard: Geforce GTX 1092 Ti 6GB,\nRAM: 145GB DDR4 24234MHZ.\n");
-            HardwareOfPCs.Add("Mekkbook", "Processor: Intel i2 HQ4100-K,\nVideocard: Geforce GTX 6969 Ti 8GB,\nRAM: 155GB DDR4 24054HZ.\n");
+            HardwareOfPCs.Add("Mekkbook", "Processor: Intel i2 HQ4100-K,\nVideocard: Geforce GTX 6969 Ti 8GB,\nRAM: 1337GB DDR4 99999HZ.\n");
             HardwareOfPCs.Add("Agent", "Processor: Intel i1 HQ4100-K,\nVideocard: Geforce GTX 420 Ti 16GB,\nRAM: 152GB DDR4 2402340MHZ.\n");
             HardwareOfPCs.Add("JustforWork", "Processor: Intel i6 HQ4100-K,\nVideocard: Geforce GTX 360 Ti 18GB,\nRAM: 151GB DDR4 24005MHZ.\n");
             HardwareOfPCs.Add("Electricbill", "Processor: Intel i5 HQ4100-K,\nVideocard: Geforce GTX 1337 Ti 6GB,\nRAM: 175GB DDR4 24060MHZ.\n");           

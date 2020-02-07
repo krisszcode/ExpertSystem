@@ -49,7 +49,7 @@ namespace ExpertSystem
         }
         public Boolean getAnswerByQuestion(string questionId)
         {
-            return myenumrule.Current.GetEvalutedAnswer(AnyInput(myenumrule.Current.GetQuestion()));
+            return myenumrule.Current.GetEvalutedAnswer(JustYesNo(myenumrule.Current.GetQuestion()));
         }
 
         public string evaluate()

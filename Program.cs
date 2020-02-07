@@ -99,7 +99,7 @@ namespace ExpertSystem
                     return true;
                 case "5":
                     Console.Clear();
-                    Console.WriteLine("Currently sitting in the jacuzzi of Howard Wolowitz with Stuart.");
+                    Console.WriteLine("Currently sitting in Howard Wolowitz's jacuzzi with Stuart.");
                     Console.ReadKey();
                     return true;
                 case "6":
@@ -109,11 +109,11 @@ namespace ExpertSystem
                     return true;
                 case "7":
                     Console.Clear();
-                    Console.WriteLine("Drinking with Homer.");
+                    Console.WriteLine("Drinking Duff bear with Homer.");
                     Console.ReadKey();
                     return true;
                 case "0":
-                    Console.WriteLine("Bye, bye...");
+                    Console.WriteLine("Namastey...");
                     return false;
                 default:
                     Console.WriteLine("Wrong option...");

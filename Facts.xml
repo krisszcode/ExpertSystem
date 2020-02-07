@@ -121,7 +121,7 @@
         </Evals>
     </Fact>
 	<Fact id="Mekkbook">
-        <Description value="Silly portable laptop for bearded goofy goats, Starbucks edition"/>
+        <Description value="Silly portable laptop for bearded goofies, Starbucks edition"/>
         <Evals>
             <Eval id="portable">false</Eval>
             <Eval id="gaming">false</Eval>
@@ -131,7 +131,7 @@
         </Evals>
     </Fact>
 	<Fact id="Agent">
-        <Description value="Agent Fury stolen Laptop, slightly used (some bullethole, scratch nothing serious)"/>
+        <Description value="Agent Fury stolen Laptop, slightly used (some bullethole/scratches nothing serious)"/>
         <Evals>
             <Eval id="portable">true</Eval>
             <Eval id="gaming">false</Eval>
